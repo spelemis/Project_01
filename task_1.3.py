@@ -15,26 +15,26 @@
 
     # Введите номер месяца: 15
     # Такого месяца нет!
-God=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
-DneyVmesyace=[31,28,31,30,31,30,31,31,30,31,30,31]
-NomerMsca = 0  
-Zelanie=input ('Желаете ввнести номер месяца (Д/Н) ? ')
+Year=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
+Month_duration=[31,28,31,30,31,30,31,31,30,31,30,31]
+Month_number = 0  
+Choice=input ('Желаете ввнести номер месяца (Д/Н) ? ')
 
-while Zelanie != 'Н':
-    # NomerMsca=0
-    while NomerMsca not in range (1,13) :
+while Choice != 'Н':
+    # Month_number=0
+    while Month_number not in range (1,13) :
         try:
-            NomerMsca=int(input('Введите номер месяца:'))
-            if NomerMsca not in range(1,13):
+            Month_number=int(input('Введите номер месяца:'))
+            if Month_number not in range(1,13):
                 print('\n Такого месяца нет!')
             else :
-                print('Вы ввели', God[NomerMsca-1],',',DneyVmesyace[NomerMsca-1],' дней\n')
+                print('Вы ввели', Year[Month_number-1],',',Month_duration[Month_number-1],' дней\n')
             
         except ValueError:
             print('\n Введены неправильные данные.')
             print('Попробуйте ещё раз:')
     
-    Zelanie=input ('Желаете ввнести номер месяца (Д/Н) ? ')
-    NomerMsca=0     
+    Choice=input ('Желаете ввнести номер месяца (Д/Н) ? ')
+    Month_number=0     
 print ('До новых встреч !')
 
