@@ -24,6 +24,7 @@ while i < Number_of_letters:
     
 print('\n','\n', Song[0], Song[3], Song[1], Song[2])
 print('\n',Song[0],'\n', Song[3],'\n', Song[1],'\n', Song[2])
+print('\n')
 
 
     
