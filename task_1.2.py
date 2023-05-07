@@ -39,7 +39,7 @@ while i<3:
     print('           i=', Selected_song+1,'/Название:', my_favorite_songs[Selected_song][0], 
           '/Длина звучания сонга:', my_favorite_songs[Selected_song][1])
     i +=1
-print ('\n Три песни звучат', X,'мин',
+print ('\n Три песни звучат', round(X,2),'мин',
        '\n*****************************************\n')
 
 # Пункт B. 
@@ -102,7 +102,7 @@ print('случайно выбранная песня:', random.sample(my_favori
 # Пункт D.
 # Переведите минуты и секунды в формат времени. Используйте модуль datetime 
 
-print(' ----------- D -----------------\n')
+print(' \n----------- D -----------------\n')
 
 import datetime
 
