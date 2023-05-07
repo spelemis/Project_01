@@ -3,21 +3,22 @@
 # Это программа сортирует по алгоритму "пузырок".
 import random
 
-Massiv=[0,0,0,0,0,0,0,0,0,0]
+Arr=[0,0,0,0,0,0,0,0,0,0]
 i, j = (0, 0)
 
-DlinaMassiva = len (Massiv)
+Number_of_Items = len (Arr)
 
-for i in range (0, DlinaMassiva):
-    Massiv[i]= random.randint(1,100)
-print ('Несортированный массив:', Massiv) 
+for i in range (0, Number_of_Items):
+    Arr[i]= random.randint(1,100)
+print ('\n Несортированный массив:', Arr) 
 
-while DlinaMassiva>0:
-    for j in range(0,DlinaMassiva-1):
-        if Massiv[j]>Massiv[j+1]:
-            Pom=Massiv[j+1]
-            Massiv[j+1]=Massiv[j]
-            Massiv[j]=Pom
-    DlinaMassiva -=1
+while Number_of_Items>0:
+    for j in range(0,Number_of_Items-1):
+        if Arr[j]>Arr[j+1]:
+            Pom=Arr[j+1]
+            Arr[j+1]=Arr[j]
+            Arr[j]=Pom
+    Number_of_Items -=1
 
-print('Сортированный массив:', Massiv,)
+print('\n Сортированный массив:', Arr,)
+print('\n')
