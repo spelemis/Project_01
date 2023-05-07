@@ -3,22 +3,22 @@
 # [12, 4, 54, 29, 46, 36, 72, 99, 85] 
 # Вывести итог на экран
 
-Massiv = [12, 4, 54, 29, 46, 36, 72, 99, 85]
+Arr = [12, 4, 54, 29, 46, 36, 72, 99, 85]
 
 i, j = (0, 0)
-DlinaMassiva = len (Massiv)
+Number_of_Items = len (Arr)
 
-print ('Dlina massiva :', DlinaMassiva)
-print('Несортированный массив:', Massiv,)
-while i<DlinaMassiva:
-    Min=Massiv[i]
+print ('Dlina massiva :', Number_of_Items)
+print('Несортированный массив:', Arr,)
+while i<Number_of_Items:
+    Min=Arr[i]
     IndexMin=i
-    for j in range(i,DlinaMassiva):
-        if Massiv[j]<Min:
-            Min= Massiv[j]
+    for j in range(i,Number_of_Items):
+        if Arr[j]<Min:
+            Min= Arr[j]
             IndexMin=j
-    Massiv[IndexMin]=Massiv[i]
-    Massiv[i]=Min
+    Arr[IndexMin]=Arr[i]
+    Arr[i]=Min
     i=i+1
-print('Сортированный массив:', Massiv,)
+print('Сортированный массив:', Arr,)
   
