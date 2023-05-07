@@ -4,31 +4,31 @@
 # пользователь должен информироваться о том, что он допустил ошибку
 
 import random
-Znaki = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890' 
+Chars = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890' 
 i=0   # Счётчик букв в пароле
-Znak=''
-Parolj=''    # Иницируем пароль 
-DlinaParolya=0
-Zelanie=''
-Zelanie=input('Желаете сгенерировать новый пароль ? Д/Н :')
-j=0 # Расположение случайного знака в строке Znaki для пароля
-while Zelanie not in ('Н','н') :
+Char=''
+Password=''    # Иницируем пароль 
+Chars_in_Password=0
+Choice=''
+Choice=input('Желаете сгенерировать новый пароль ? Д/Н :')
+j=0 # Расположение случайного знака в строке Chars для пароля
+while Choice not in ('Н','н') :
     i, j=(0,0)
-    Parolj=''
+    Password=''
     try:
-        DlinaParolya=int(input('Введите длину пароля:'))
-        while i < DlinaParolya:
-            j= random.randint (0,len(Znaki)-1)
-            Znak=Znaki[j]
-            Parolj=Parolj + Znak 
+        Chars_in_Password=int(input('Введите длину пароля:'))
+        while i < Chars_in_Password:
+            j= random.randint (0,len(Chars)-1)
+            Char=Chars[j]
+            Password=Password + Char 
             i=i+1
-        print('Пароль:', Parolj,'\n')
+        print('Пароль:', Password,'\n')
     except ValueError:
-        # DlinaParolya=0
+        # Chars_in_Password=0
         print('\n Введенно нечисловое значение')
         print('Пароль несгенерирован')
         print('Попробуйте ещё раз:')
-    Zelanie=input('Желаете сгенерировать новый пароль ? Д/Н :')
-print('Пароль сгенерирован и выбран:', Parolj,'\n\n')
+    Choice=input('Желаете сгенерировать новый пароль ? Д/Н :')
+print('Пароль сгенерирован и выбран:', Password,'\n\n')
 
 
