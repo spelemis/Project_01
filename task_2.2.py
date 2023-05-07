@@ -9,27 +9,27 @@
 def quarter_of(month):
     
     if month >0 and month <= 3 :
-        Kvartal=1
+        Quarter=1
     else : 
         if month >3 and month <= 6:
-            Kvartal=2
+            Quarter=2
         else:
             if month >6 and month <= 9:
-                Kvartal=3
+                Quarter=3
             else:
-                Kvartal=4
-    return Kvartal
+                Quarter=4
+    return Quarter
 
-Msc = 0 
+Mnt = 0 
 
-while Msc not in range (1,13) :
+while Mnt not in range (1,13) :
     
     try:
-        Msc=int(input('Введите номер месяца:'))
-        if Msc not in range(1,13):
+        Mnt=int(input('Введите номер месяца:'))
+        if Mnt not in range(1,13):
            print('\n Такого месяца нет!')
         else :
-           print ('Mesec:', Msc, 'Это квартал № :', quarter_of(Msc))          
+           print ('Mesec:', Mnt, 'Это квартал № :', quarter_of(Mnt))          
     except ValueError:
         print('\n Введены неправильные данные.')
         print('Попробуйте ещё раз:')
