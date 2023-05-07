@@ -31,9 +31,9 @@ store = {
 # Пример: "Кроссовки тип 3 (Adidas) - 31 шт, стоимость 50747 руб"
 
 print ('\n Zadaca 1.4 \n')
-SlovarKodov = len(titles)
-ElementovStore = len(store)
-print ('  На складе имеются ', ElementovStore,' видов товара в сл. объёмах: \n')
+# Numbers_in_titles = len(titles)
+Items_in_store = len(store)
+print ('  На складе имеются ', Items_in_store,' видов товара в сл. объёмах: \n')
 for i in titles :
     Qnty=0
     QntyPrice=0
@@ -42,3 +42,4 @@ for i in titles :
          QntyPrice += store[titles[i]][j]['quantity'] * store[titles[i]][j]['price']
          Qnty+= store[titles[i]][j]['quantity']
     print ('    ',i,': колличество:', Qnty,'шт, стоимость:', QntyPrice,'руб.')
+print('\n')
