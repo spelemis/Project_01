@@ -25,20 +25,20 @@ def maximum(arr):
              Maks=arr[i]
     return Maks
 
-Osibka=False
-Zelanie=input ('Желаете ввнести новый список (Д/Н) ? ')
+Error=False
+Choice=input ('Желаете внести новый список (Д/Н) ? ')
 # Ввод данных : колличество эл. списка и элементы списка.
 #********************************************************
-while Zelanie != 'Н':
+while Choice != 'Н':
     try:
-        ElementovSpiska =int(input('  Введите кол. элементов списка:'))
+        Items_in_listing =int(input('  Введите кол. элементов списка:'))
         i=0
-        Spisok=[]
-        while i in range (0, ElementovSpiska):
+        Listing=[]
+        while i in range (0, Items_in_listing):
               try:
-                ElementSpiska=int(input('Внесите целое число, эл.списка: '))
-                Spisok.insert(i,ElementSpiska)
-                print (i, 'Spisok[i]=', Spisok[i])
+                Item=int(input('Внесите целое число, эл.списка: '))
+                Listing.insert(i,Item)
+                print (i+1, 'Список[',i+1,']=', Listing[i])
                 i +=1
               except ValueError:
 
@@ -48,15 +48,16 @@ while Zelanie != 'Н':
     except ValueError:
         print('\n Введены неправильные данные.')
         print(' Пробуйте ещё раз:')
-        Osibka=True
-        Zelanie='Д'
-    if not(Osibka) :
-        print(Spisok)
-        print ('Минимум=', minimum(Spisok))
-        print ('Максимум=', maximum(Spisok))
-    Osibka= False
-    Zelanie=input ('Желаете ввнести новый список (Д/Н) ? ')
+        Error=True
+        Choice='Д'
+    if not(Error) :
+        print(Listing)
+        print ('Минимум=', minimum(Listing))
+        print ('Максимум=', maximum(Listing))
+    Error= False
+    Choice=input ('Желаете внести новый список (Д/Н) ? ')
 #****************************************************************************
 
 print ('\n До новых встреч !')
+print('\n')
 
