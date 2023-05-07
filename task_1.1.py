@@ -7,12 +7,12 @@ my_favorite_songs = 'Waste a Moment, Staying\' Alive, A Sorta Fairytale, Start M
 #  второй с конца
 # Нельзя переопределять my_favorite_songs и запятая не должна выводиться.
 
-ItogoBukv = len(my_favorite_songs) # Определение длины входной строки
+Number_of_letters = len(my_favorite_songs) # Определение длины входной строки
 i=0   # Счётчик букв в входной строке
 j=0   # Счётчик треков
 Pesnya=['','','','']      # Множество треков выделенных из входной строки
 Song=''   # Промежуточное название трека
-while i < ItogoBukv:
+while i < Number_of_letters:
     if my_favorite_songs[i] == ',': 
         Pesnya[j]=Song # Выделили запятую, значит название трека собрано .
         j=j+1
