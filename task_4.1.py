@@ -31,6 +31,13 @@ def ConnectDB():
     cur=con.cursor()
     return
 
+def DisconnectDB():    # Отключение от базы данных
+    cur.close()
+    con.close()
+    return
+
+
+
 def CreateTable():
     sql= '''CREATE TABLE Students (
                  Student_Id INTEGER,
@@ -102,9 +109,11 @@ CreateTable()
 DeleteTable()
 InsertInTable()
 SelectFrom()
+DisconnectDB()
 
-cur.close()
-con.close()
+
+
+
 
 
 
