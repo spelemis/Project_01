@@ -34,6 +34,7 @@ def get_student(student_id):
   print(records)
   #for row in records:
     #print()
+  
 
 get_student(201)
 
@@ -48,7 +49,7 @@ def get_schoolname(school_id):
   record = cursor.fetchone()
   connection.close()
   print ("Название школы ", record[1])
-
+  
 
 def get_stud_detail(student_id):
   connection = sqlite3.connect("Students.db")
@@ -61,7 +62,7 @@ def get_stud_detail(student_id):
   print ("ID школы", record[2])
   school_id = record[2]
   get_schoolname(school_id)
-
+  
 
 
 get_stud_detail(201)
